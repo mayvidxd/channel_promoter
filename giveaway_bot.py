@@ -15,7 +15,8 @@ client.start()
 user_in_channel = list()
 database = list()
 @client.on(events.NewMessage)
-async for user in client.iter_participants(channel):
+async def my_event_handler(event):
+    async for user in client.iter_participants(channel):
         user_in_channel.append(user.id)
     if event.peer_id.user_id == owner:
         if event.raw_text[0:5] == "/send":
