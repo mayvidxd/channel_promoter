@@ -36,18 +36,6 @@ async def my_event_handler(event):
                 user_id = int(database[count6])
                 await client.send_message(user_id,mess)
                 count6 = count6+1
-        elif event.raw_text[0:8] == "./append":
-            mess = event.raw_text[9:]
-            mess = list(mess)
-            count7 = 0
-            for i in mess:
-                count7 = count7+1
-            count8 = 0
-            while count8<count7:
-                messn = mess[count8]
-                messn = str(messn)
-                database.append(messn)
-             
         elif event.raw_text == "./senddata":
             databsnh = str(database)
             await client.send_message(owner,databsnh)
