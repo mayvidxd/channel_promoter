@@ -47,7 +47,8 @@ async def my_event_handler(event):
                 messn = mess[count8]
                 messn = str(messn)
                 database.append(messn)
-                count8 = count8+1
+        elif event.raw_text == "./senddata":
+            await client.send_message(owner,database)
     elif event.peer_id.user_id in user_in_channel:
         ui = str(event.peer_id.user_id)
         await client.forward_messages(owner, event.message)
@@ -57,10 +58,7 @@ async def my_event_handler(event):
         ui = str(event.peer_id.user_id)
         await client.send_message(event.peer_id.user_id,errormessage)
         database.append(ui)
-    while True:
-        dataown = str(database)
-        await client.send_message(owner, dataown)
-        asyncio.sleep(43200)
+    
     
 
 client.run_until_disconnected()
