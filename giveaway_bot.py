@@ -43,12 +43,17 @@ async def my_event_handler(event):
         ui = str(event.peer_id.user_id)
         await client.forward_messages(owner, event.message)
         await client.send_message(owner,ui)
-        database.append(ui)
+        if ui in database:
+            pass
+        else:
+            database.append(ui)
     else:
         ui = str(event.peer_id.user_id)
         await client.send_message(event.peer_id.user_id,errormessage)
-        database.append(ui)
+        if ui in database:
+            pass
+        else:
+            database.append(ui)
 
 client.run_until_disconnected()
-
 
