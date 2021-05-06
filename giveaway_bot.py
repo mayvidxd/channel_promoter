@@ -41,6 +41,7 @@ async def my_event_handler(event):
         await client.send_message(owner,ui)
         database.append(ui)
     else:
+        ui = str(event.peer_id.user_id)
         await client.send_message(event.peer_id.user_id,errormessage)
         database.append(ui)
 
