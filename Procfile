@@ -1,1 +1,1 @@
-worker: python3 giveaway_bot.py
+worker: python3 bot.py
