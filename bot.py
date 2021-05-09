@@ -55,6 +55,6 @@ async def my_event_handler(event):
         else:
             database.append(ui)
 
-# "BOT DEVLOPED BY ★𝓐𝓟★ AND"
+
 
 client.run_until_disconnected()
