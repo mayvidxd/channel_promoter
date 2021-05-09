@@ -1,6 +1,6 @@
 # CHANNEL PROMOTER
 
-A channel promoter bot devloped by the HARDCORE (⚚𝙃𝘾⚚) & 🅻⭕⭕⭕ community.
+A channel promoter bot devloped by .★𝓐𝓟★
 
 How it works- 
 
