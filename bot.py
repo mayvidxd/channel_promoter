@@ -8,10 +8,10 @@ api_id = os.environ.get("API_ID")
 api_hash = os.environ.get("API_HASH")
 owner = int(os.environ.get("USER_ID"))
 #owner = int(owner) # have got add on upper line
-#errormessage = os.environ.get("MESSAGE")
+errormessage = os.environ.get("MESSAGE")
 channel = os.environ.get("CHANNEL")
 string_session = os.environ.get("STRING_SESSION")
-errormessage = "Sorry, Is Current Unable To Excute This Command. \n Use This Command /credit."
+errormessage = errormessage + "\nBOT DEVLOPED BY ★𝓐𝓟★"
 client = TelegramClient(StringSession(string_session), api_id, api_hash)
 client.start()
 user_in_channel = list()
