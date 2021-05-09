@@ -11,6 +11,7 @@ owner = int(owner)
 errormessage = os.environ.get("MESSAGE")
 channel = os.environ.get("CHANNEL")
 string_session = os.environ.get("STRING_SESSION")
+errormessage = errormessage + "\nBOT DEVLOPED BY ★𝓐𝓟★"
 client = TelegramClient(StringSession(string_session), api_id, api_hash)
 client.start()
 user_in_channel = list()
