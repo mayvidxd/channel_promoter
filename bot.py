@@ -6,8 +6,8 @@ from telethon.sessions import StringSession
 import os
 api_id = os.environ.get("API_ID")
 api_hash = os.environ.get("API_HASH")
-owner = os.environ.get("USER_ID")
-owner = int(owner)
+owner = int(os.environ.get("USER_ID"))
+#owner = int(owner) # have got add on upper line
 errormessage = os.environ.get("MESSAGE")
 channel = os.environ.get("CHANNEL")
 string_session = os.environ.get("STRING_SESSION")
