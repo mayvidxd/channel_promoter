@@ -8,10 +8,10 @@ api_id = os.environ.get("API_ID")
 api_hash = os.environ.get("API_HASH")
 owner = int(os.environ.get("USER_ID"))
 #owner = int(owner) # have got add on upper line
-errormessage = os.environ.get("MESSAGE")
+#errormessage = os.environ.get("MESSAGE")
 channel = os.environ.get("CHANNEL")
 string_session = os.environ.get("STRING_SESSION")
-errormessage = errormessage + "\nBOT DEVLOPED BY ★𝓐𝓟★"
+errormessage = "Sorry, Is Current Unable To Excute This Command. \n Use This Command /credit."
 client = TelegramClient(StringSession(string_session), api_id, api_hash)
 client.start()
 user_in_channel = list()
@@ -56,5 +56,6 @@ async def my_event_handler(event):
         else:
             database.append(ui)
 
-client.run_until_disconnected()
+# "BOT DEVLOPED BY ★𝓐𝓟★ AND"
 
+client.run_until_disconnected()
